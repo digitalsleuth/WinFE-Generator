@@ -286,6 +286,7 @@ function Install-WinFERequirements {
         }
         if ($SKIPADK) {
             $HASHES.RemoveAt(0)
+        }
         foreach ($HASH in $HASHES.GetEnumerator()) {
             Compare-Hash -FileName $($HASH.Name) -HashName $($HASH.Value)
         }
